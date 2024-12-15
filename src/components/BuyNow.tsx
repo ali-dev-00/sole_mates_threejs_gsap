@@ -2,6 +2,6 @@ import React from 'react'
 
 export const BuyNow = () => {
   return (
-    <section className='h-screen' ></section>
+    <section className='h-screen' >Buy Now</section>
   )
 }

@@ -3,7 +3,8 @@ import { Canvas } from '@react-three/fiber';
 import { Jordan } from './Jordan';
 import { Environment, OrbitControls } from '@react-three/drei';
 import gsap from 'gsap';
-
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 export const CanvasContainer = () => {
   return (
     <Canvas camera={{  position: [
@@ -11,7 +12,7 @@ export const CanvasContainer = () => {
     ]}}>
      
       <Jordan />
-      <OrbitControls />
+      <OrbitControls enableZoom={false}/>
       <Environment preset='city' />
     </Canvas> 
   );
